@@ -1,0 +1,35 @@
+pipeline:
+  name: new1
+  identifier: new1
+  projectIdentifier: delivery
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: https://github.com/lavakush07/go-pipeline-sample
+        build: <+input>
+  stages:
+    - stage:
+        name: buiild
+        identifier: buiild
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: echo "Hello lavakush"
