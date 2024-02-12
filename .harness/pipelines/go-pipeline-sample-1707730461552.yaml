@@ -1,0 +1,33 @@
+pipeline:
+  name: Build go-pipeline-sample
+  identifier: Build_lavakush07_go_pipeline_sample_1707730546728
+  projectIdentifier: testing
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: lavakush07/go-pipeline-sample
+        build: <+input>
