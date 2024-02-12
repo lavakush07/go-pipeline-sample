@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_lavakush07_go_pipeline_sample_1707730546728-push-trigger-input-set
+  identifier: Build_lavakush07_go_pipeline_sample_1707730546728pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: testing
+  pipeline:
+    identifier: Build_lavakush07_go_pipeline_sample_1707730546728
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
