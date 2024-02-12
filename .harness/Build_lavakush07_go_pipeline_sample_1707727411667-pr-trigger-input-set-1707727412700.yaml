@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_lavakush07_go_pipeline_sample_1707727411667-pr-trigger-input-set
+  identifier: Build_lavakush07_go_pipeline_sample_1707727411667prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Newpipeline
+  pipeline:
+    identifier: Build_lavakush07_go_pipeline_sample_1707727411667
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
